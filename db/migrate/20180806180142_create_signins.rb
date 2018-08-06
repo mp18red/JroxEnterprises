@@ -1,0 +1,10 @@
+class CreateSignins < ActiveRecord::Migration[5.2]
+  def change
+    create_table :signins do |t|
+      t.string :Iboname
+      t.string :Candidate
+
+      t.timestamps
+    end
+  end
+end
