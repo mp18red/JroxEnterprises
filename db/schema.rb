@@ -12,13 +12,7 @@
 
 ActiveRecord::Schema.define(version: 2018_08_06_180142) do
 
-  create_table "MeetingSign", primary_key: "ID", id: :integer, options: "ENGINE=MyISAM DEFAULT CHARSET=latin1", force: :cascade do |t|
-    t.string "IboName", limit: 50, null: false
-    t.string "Candidate", limit: 50
-    t.timestamp "Date_Created", default: -> { "CURRENT_TIMESTAMP" }
-  end
-
-  create_table "signins", options: "ENGINE=MyISAM DEFAULT CHARSET=latin1", force: :cascade do |t|
+  create_table "signins", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "Iboname"
     t.string "Candidate"
     t.datetime "created_at", null: false
