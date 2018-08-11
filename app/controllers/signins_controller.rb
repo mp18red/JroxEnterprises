@@ -4,7 +4,7 @@ class SigninsController < ApplicationController
   # GET /signins
   # GET /signins.json
   def index
-    @signins = Signin.all
+    @signins = Signin.where(created_at: Time.zone.now.beginning_of_day..Time.zone.now.end_of_day)
   end
 
   # GET /signins/1
@@ -43,7 +43,7 @@ class SigninsController < ApplicationController
     respond_to do |format|
       if @signin.update(signin_params)
         format.html { redirect_to @signin, notice: 'Signin was successfully updated.' }
-        format.json { render :show, status: :ok, location: @signin }
+        format.json { render :back, status: :ok, location: @signin }
       else
         format.html { render :edit }
         format.json { render json: @signin.errors, status: :unprocessable_entity }

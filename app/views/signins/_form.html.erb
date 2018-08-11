@@ -12,16 +12,28 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :Iboname %>
-    <%= form.text_field :Iboname %>
-  </div>
+<div class="input-group-lg">
+<div class="input-group-prepend">
+      <%= form.label :IboName, class:"input-group-text" %>
+      <%= form.text_field :Iboname, class:"form-control" %>
+</div>
+</div>
+</div>
 
-  <div class="field">
-    <%= form.label :Candidate %>
-    <%= form.text_field :Candidate %>
-  </div>
 
-  <div class="actions">
-    <%= form.submit %>
-  </div>
+<div class="field">
+<div class="input-group-lg">
+<div class="input-group-prepend">
+      <%= form.label :Candidate, class:"input-group-text" %>
+      <%= form.text_field :Candidate, class:"form-control" %>
+</div>
+</div>
+</div>
+
+<br>
+
+    <%= submit_tag 'Sign In' ,class:"btn btn-success btn-lg btn-block text-white"%>
+    <br>
+    <%= link_to 'Back', '/signins', class:"btn btn-primary btn-lg btn-block text-white" %>
+
 <% end %>

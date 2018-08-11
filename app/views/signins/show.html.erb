@@ -1,14 +1,18 @@
 <p id="notice"><%= notice %></p>
 
-<p>
+<h4>
   <strong>Iboname:</strong>
   <%= @signin.Iboname %>
-</p>
+</h4>
 
-<p>
+<h4>
   <strong>Candidate:</strong>
   <%= @signin.Candidate %>
-</p>
+</h4>
 
-<%= link_to 'Edit', edit_signin_path(@signin) %> |
-<%= link_to 'Back', signins_path %>
+<br>
+<div class-"container">
+<%= link_to 'Edit', edit_signin_path(@signin) , class: "btn btn-primary btn-lg btn-block text-white"%>
+<br>
+</div>
+<%= link_to 'Done', signins_path, class:"btn btn-success btn-lg btn-block text-white" %>
