@@ -1,5 +1,8 @@
 <h1>Editing Signin</h1>
 <br>
 <%= render 'form', signin: @signin %>
+<br>
+<%= link_to 'Remove', @signin, method: :delete, class:"btn btn-danger btn-lg btn-block text-white", data: { confirm: 'Are you sure?'} %>
+
 
 
