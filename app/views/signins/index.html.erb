@@ -14,7 +14,7 @@
   <div class="jumbotron" align="center">
     <h1>Meeting Sign In</h1>      
     <h3>Welcome</h3>
-    <h4><%= Time.now %></h4>
+    <h4><%= Time.use_zone('Lima') { Time.zone.now } %></h4>
     
   </div>
 
