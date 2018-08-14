@@ -8,7 +8,9 @@ Bundler.require(*Rails.groups)
 
 module JroxEnterprises
   class Application < Rails::Application
-    config.Time_zone = "Eastern Time (US & Canada)"
+    config.time_zone = 'Eastern Time (US & Canada)'
+    config.active_record.default_timezone = 'Eastern Time (US & Canada)'
+
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 5.2
 
