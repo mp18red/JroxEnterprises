@@ -7,6 +7,8 @@ class SigninsController < ApplicationController
     @signins = Signin.where(created_at: Time.zone.now.beginning_of_day..Time.zone.now.end_of_day)
   end
 
+  
+
   # GET /signins/1
   # GET /signins/1.json
   def show
