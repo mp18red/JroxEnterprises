@@ -8,7 +8,7 @@ Bundler.require(*Rails.groups)
 
 module JroxEnterprises
   class Application < Rails::Application
-    config.Time_zone = 'America/New_York'
+    config.time_zone = 'America/New_York'
     config.active_record.default_timezone = 'America/New_York'
 
     # Initialize configuration defaults for originally generated Rails version.
