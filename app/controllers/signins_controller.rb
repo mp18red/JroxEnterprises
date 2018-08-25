@@ -4,7 +4,7 @@ class SigninsController < ApplicationController
   # GET /signins
   # GET /signins.json
   def index
-    @signins = Signin.all
+    @signins = Signin.where(created_at: Time.zone.now.beginning_of_day..Time.zone.now.end_of_day)
   end
 
   
