@@ -30,7 +30,7 @@ class SigninsController < ApplicationController
 
     respond_to do |format|
       if @signin.save
-        format.html { redirect_to @signin, notice: 'Signin was successfully created.' }
+        format.html { redirect_to @signin, notice: 'Ibo was successfully Added.' }
         format.json { render :show, status: :created, location: @signin }
       else
         format.html { render :new }
@@ -44,7 +44,7 @@ class SigninsController < ApplicationController
   def update
     respond_to do |format|
       if @signin.update(signin_params)
-        format.html { redirect_to @signin, notice: 'Signin was successfully updated.' }
+        format.html { redirect_to @signin, notice: 'Ibo was successfully updated.' }
         format.json { render :back, status: :ok, location: @signin }
       else
         format.html { render :edit }
@@ -58,7 +58,7 @@ class SigninsController < ApplicationController
   def destroy
     @signin.destroy
     respond_to do |format|
-      format.html { redirect_to signins_url, notice: 'Signin was successfully destroyed.' }
+      format.html { redirect_to signins_url, notice: 'Ibo was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
